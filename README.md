@@ -1,1 +1,4 @@
-# ws-codechallenge
+# npm install
+
+# npm run dev  to start
+
