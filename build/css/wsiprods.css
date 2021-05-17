@@ -1,0 +1,72 @@
+/* modify wsi styling here */
+
+.wsi-body {
+  background-color: #f0f0f0;
+}
+
+.wsi-container {
+  background-color: #fff;
+  outline: 1px solid #bbb;
+}
+
+.wsi-card {
+  display: inline-block;
+  margin: 1rem 0.5rem;
+  width: 354px;
+  vertical-align: top !important;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,0.125);
+  flex-direction: row;
+  transition: scale .3s ease, box-shadow .2s ease;
+}
+
+.wsi-card:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+  0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transform: scale(1.015);
+  transition: scale .4s ease, box-shadow .2s ease;
+}
+
+.wsi-card .card-body {
+  padding: 0.7rem 1.25rem;
+}
+
+.wsi-card img:focus {
+  outline: 3px solid rgba(30,144,255,0.5);
+}
+
+.wsi-card .card-text {
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.wsi-card p:last-child.card-text {
+  margin-bottom: 0;
+}
+
+.wsi-price {
+  font-weight: 600;
+}
+
+.wsi-sale {
+  color: red;
+}
+
+/* force to single-column display on small viewport */
+@media (max-width: 775px) {
+  .wsi-h1 {
+    font-size: 150%;
+  }
+
+  .wsi-container {
+    padding: 0.5rem 0;
+  }
+
+  .wsi-card {
+    display: block;
+    max-width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="description"
+        content="Karthik Coding Challenge  Williams Sonoma">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"  href="css/bootstrap.min.css">
+  <title>Karthik Coding Challenge  Williams Sonoma</title>
+  <link rel="stylesheet" href="css/prods.css">
+</head>
+<body class="wsi-body">
+<header>
+  <h1 class="wsi-h1 text-center">Karthik Coding Challenge  Williams Sonoma  - Terry
+    Morse</h1>
+</header>
+<br>
+<main id="productsvm">
+  <div id="products-container" class="container-lg wsi-container">
+    <div v-for="product in products"
+         class="card wsi-card"
+         v-bind:key="product.id"
+    >
+      <product-img v-bind:product="product"></product-img>
+      <div class="card-body">
+        <product-name v-bind:name="product.name"></product-name>
+        <product-pricing v-bind:displayPrice="displayPrice(product)">
+        </product-pricing>
+      </div>
+    </div>
+  </div>  <!-- /#products-container -->
+
+</main>
+
+<!-- JavaScript for Bootstrap -->
+<script  src="./jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+<script src="js/products.js" type="module"></script>
+
+</body>
+</html>
