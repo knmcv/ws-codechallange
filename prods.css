@@ -1,0 +1,90 @@
+/* modify wsi styling here */
+:root {
+  --wsi-body-background-color: #f0f0f0;
+  --wsi-container-background-color: #fff;
+  --wsi-container-outline: 1px solid #bbb;
+  --wsi-card-margin: 1rem 0.5rem;
+  --wsi-card-width: 354px;
+  --wsi-card-text-size: 0.85rem;
+  --wsi-card-line-height: 1.2;
+  --wsi-card-background-color: #fff;
+  --wsi-card-border: 1px solid rgba(0,0,0,0.125);
+  --wsi-card-hover-filter: drop-shadow(0 0 4px rgba(0,0,0,0.4));
+  --wsi-card-hover-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+  0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  --wsi-card-hover-transform: scale(1.015);
+  --wsi-card-img-focus-outline: 3px solid rgba(30,144,255,0.5);
+  --wsi-card-flex-direction: row;
+  --wsi-price-font-weight: 600;
+  --wsi-sale-text-color: red;
+}
+
+.wsi-body {
+  background-color: var(--wsi-body-background-color);
+}
+
+.wsi-container {
+  background-color: var(--wsi-container-background-color);
+  outline: var(--wsi-container-outline);
+}
+
+.wsi-card {
+  display: inline-block;
+  margin: var(--wsi-card-margin);
+  width: var(--wsi-card-width);
+  vertical-align: top !important;
+  background-color: var(--wsi-card-background-color);
+  border: var(--wsi-card-border);
+  flex-direction: var(--wsi-card-flex-direction);
+  transition: scale .3s ease, box-shadow .2s ease;
+}
+
+.wsi-card:hover {
+  box-shadow: var(--wsi-card-hover-shadow);
+  transform: var(--wsi-card-hover-transform);
+  transition: scale .4s ease, box-shadow .2s ease;
+}
+
+.wsi-card .card-body {
+  padding: 0.7rem 1.25rem;
+}
+
+.wsi-card img:focus {
+  outline: var(--wsi-card-img-focus-outline);
+}
+
+.wsi-card .card-text {
+  font-size: var(--wsi-card-text-size);
+  margin-bottom: 0.5rem;
+  line-height: var(--wsi-card-line-height);
+}
+
+.wsi-card p:last-child.card-text {
+  margin-bottom: 0;
+}
+
+.wsi-price {
+  font-weight: var(--wsi-price-font-weight);
+}
+
+.wsi-sale {
+  color: var(--wsi-sale-text-color);
+}
+
+/* force to single-column display on small viewport */
+@media (max-width: 775px) {
+  .wsi-h1 {
+    font-size: 150%;
+  }
+
+  .wsi-container {
+    padding: 0.5rem 0;
+  }
+
+  .wsi-card {
+    display: block;
+    max-width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
